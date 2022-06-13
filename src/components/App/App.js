@@ -1,12 +1,10 @@
 import React from 'react';
-
 import './App.css';
-import { Input } from './components/Input/Input';
+import { Input } from '../Input/Input';
 
 function App() {
     return (
         <div className="App">
-            <h1>Sergio tonto</h1>
             <Input></Input>
         </div>
     );

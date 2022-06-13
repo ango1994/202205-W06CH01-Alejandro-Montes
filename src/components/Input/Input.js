@@ -6,7 +6,7 @@ export const Input = () => {
     const [input, setInput] = useState();
     const dispatch = useDispatch();
 
-    const saveCharacter = () => {
+    const addCharacter = () => {
         console.log(`adding ${input}`);
         dispatch(
             saveCharacter({
@@ -16,22 +16,14 @@ export const Input = () => {
         );
     };
 
-    function handleSubmit(ev) {
-        ev.preventDefault();
-    }
-
     function handleChange(event) {
         setInput(event.target.value);
-        console.log(event.target.value);
-        console.log(input);
     }
 
     return (
         <div className="input">
-            <form action="" value={input}>
-                <input type="text" onChange={(event) => handleChange(event)} />
-                <button onClick={saveCharacter}>Nuevo personaje</button>
-            </form>
+            <input type="text" onChange={(event) => handleChange(event)} />
+            <button onClick={addCharacter}>Nuevo personaje</button>
         </div>
     );
 };
